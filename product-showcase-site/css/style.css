@@ -85,3 +85,7 @@ h2 {
     font-weight: 700;
     margin-top: 10px;
 }
+
+.button-link:hover {
+    background-color: #c9b47f;
+}

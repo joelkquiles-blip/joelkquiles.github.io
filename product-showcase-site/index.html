@@ -10,73 +10,187 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<section class="section section-one">
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a class="nav-logo" href="#">Yves Saint Laurent</a>
+        <ul class="nav-links">
+            <li><a href="#section-one">The Scent</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#section-three">The Night</a></li>
+        </ul>
+    </nav>
 
-    <div class="content-column">
+    <!-- HERO -->
+    <section class="section section-one" id="section-one">
+        <div class="content-column hero-layout">
+            <div class="hero-text">
+                <p class="brand-name">Yves Saint Laurent</p>
+                <p class="hero-eyebrow">New Fragrance</p>
+                <h1>Baby<br>cat</h1>
+                <p class="tagline">A Raw Vanilla Bourbon Fragrance<br>With Warm Suede Accord</p>
+                <button class="button-link" onclick="openModal('scent')">
+                    <span>Discover the Scent</span>
+                </button>
+            </div>
+            <div class="hero-img-wrap">
+                <img src="images/babycat1.png" alt="YSL Babycat fragrance bottle" class="product-image hero-img">
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
 
-        <p class="brand-name">YVES SAINT LAURENT</p>
+    <!-- SECTION TWO -->
+    <section class="section section-two" id="section-two">
+        <div class="content-column split-layout">
+            <div class="split-img-wrap reveal-img">
+                <div class="img-accent"></div>
+                <img src="images/babycat2.png" alt="Close-up image of YSL Babycat fragrance" class="product-image">
+            </div>
+            <div class="split-text reveal-text">
+                <span class="section-number">01 — The Character</span>
+                <div class="gold-divider"></div>
+                <h2>Warm Spice.<br>Soft Suede.<br>Pure Presence.</h2>
+                <p>Babycat is rich, intimate and smooth. Bold without being loud.
+                It settles into the skin like a second nature — instantly familiar, impossible to forget.</p>
+                <button class="button-link" onclick="openModal('notes')">
+                    <span>Explore the Notes</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
-        <img src="images/babycat1.png" alt="YSL Babycat fragrance bottle" class="product-image">
+    <!-- NOTES SECTION -->
+    <section class="section notes-section" id="notes">
+        <div class="notes-inner">
+            <p class="notes-eyebrow">Composition</p>
+            <h2 class="notes-title">The Anatomy of Babycat</h2>
+            <div class="notes-grid">
+                <div class="note-card">
+                    <span class="note-label">Top Notes</span>
+                    <p class="note-name">Mandarin<br>& Pepper</p>
+                </div>
+                <div class="note-card">
+                    <span class="note-label">Heart Notes</span>
+                    <p class="note-name">Suede<br>& Iris</p>
+                </div>
+                <div class="note-card">
+                    <span class="note-label">Base Notes</span>
+                    <p class="note-name">Vanilla<br>Bourbon</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h1>BABYCAT</h1>
+    <!-- SECTION THREE -->
+    <section class="section section-three" id="section-three">
+        <div class="content-column split-layout reverse">
+            <div class="split-img-wrap reveal-img">
+                <div class="img-accent"></div>
+                <img src="images/babycat3.png" alt="Lifestyle image featuring YSL Babycat fragrance" class="product-image">
+            </div>
+            <div class="split-text reveal-text">
+                <span class="section-number">02 — The Occasion</span>
+                <div class="gold-divider"></div>
+                <h2>Made for<br>the Night</h2>
+                <p>Designed for those who want to feel elegant and unforgettable.
+                Babycat leaves a mature, modern, and addictive impression from the very first breath.</p>
+                <button class="button-link" onclick="openModal('shop')">
+                    <span>Shop the Collection</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
-        <p class="tagline">
-            A Raw Vanilla Bourbon Fragrance With Warm Suede Accord
-        </p>
+    <!-- FOOTER -->
+    <footer>
+        <p class="footer-logo">Yves Saint Laurent</p>
+        <p class="footer-copy">&copy; 2025 — Babycat Fragrance — All Rights Reserved</p>
+    </footer>
 
-        <a href="#" class="button-link">Discover the Scent</a>
-
+    <!-- MODAL: SCENT -->
+    <div class="modal-overlay" id="modal-scent" onclick="closeModal(event, 'scent')">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModalById('scent')">&#215;</button>
+            <p class="modal-eyebrow">Yves Saint Laurent — Babycat</p>
+            <h3 class="modal-title">Discover the Scent</h3>
+            <p class="modal-body">Babycat is an ode to warmth and raw sensuality. Opening with a spark of citrus and spice,
+            it blooms into soft suede and iris before settling into its most seductive form —
+            a rich, creamy vanilla bourbon that lingers on the skin for hours.
+            Bold without being loud. Intimate without being soft.</p>
+        </div>
     </div>
 
-</section>
-
-
-
-<section class="section section-two">
-
-    <div class="content-column">
-
-        <img src="images/babycat2.png" alt="Close-up image of YSL Babycat fragrance" class="product-image">
-
-        <h2>Warm Spice. Soft Suede. Pure Presence.</h2>
-
-        <p>
-            Babycat is rich, intimate and smooth.  
-            Bold without being loud.
-        </p>
-
-        <a href="#" class="button-link">Explore the Notes</a>
-
+    <!-- MODAL: NOTES -->
+    <div class="modal-overlay" id="modal-notes" onclick="closeModal(event, 'notes')">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModalById('notes')">&#215;</button>
+            <p class="modal-eyebrow">Fragrance Profile</p>
+            <h3 class="modal-title">Explore the Notes</h3>
+            <p class="modal-body">
+                <strong>Top:</strong> Mandarin &amp; Black Pepper — a bright, spiced opening that announces your arrival.<br><br>
+                <strong>Heart:</strong> Suede &amp; Iris — powdery, tactile, impossibly soft against the skin.<br><br>
+                <strong>Base:</strong> Vanilla Bourbon — deep, sweet, and utterly addictive. This is where Babycat lives.
+            </p>
+        </div>
     </div>
 
-</section>
-
-
-
-<section class="section section-three">
-
-    <div class="content-column">
-
-        <img src="images/babycat3.png" alt="Lifestyle image featuring YSL Babycat fragrance" class="product-image">
-
-        <h2>Made for the Night</h2>
-
-        <p>
-            Designed for people who want to feel elegant and unforgettable.  
-            Babycat leaves a mature, modern, and addictive impression.
-        </p>
-
-        <a href="#" class="button-link">Shop the Collection</a>
-
+    <!-- MODAL: SHOP -->
+    <div class="modal-overlay" id="modal-shop" onclick="closeModal(event, 'shop')">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModalById('shop')">&#215;</button>
+            <p class="modal-eyebrow">The Collection</p>
+            <h3 class="modal-title">Shop Babycat</h3>
+            <p class="modal-body">Available in 30ml, 60ml, and 90ml Eau de Parfum. The Babycat collection also includes
+            a luxurious body lotion and travel-size rollerball for the fragrance obsessed.
+            Find it at YSL Beauty boutiques and select luxury department stores worldwide.</p>
+        </div>
     </div>
 
-</section>
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        });
 
+        // Scroll-triggered reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal-img, .reveal-text, .note-card').forEach(el => observer.observe(el));
+
+        // Modal logic
+        function openModal(id) {
+            document.getElementById('modal-' + id).classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModalById(id) {
+            document.getElementById('modal-' + id).classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function closeModal(e, id) {
+            if (e.target === e.currentTarget) closeModalById(id);
+        }
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.open').forEach(m => {
+                    m.classList.remove('open');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
